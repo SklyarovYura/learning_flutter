@@ -29,3 +29,16 @@ class AppWithBlocBuilder extends StatelessWidget {
     );
   }
 }
+
+class AppWithRouter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      routes: {
+        '/': (context) => ScreenA(),
+        '/screenB': (context) => ScreenB(),
+      },
+      initialRoute: '/',
+    );
+  }
+}

@@ -12,7 +12,7 @@ void main() {
   runApp(
     BlocProvider(
       create: (context) => NavigationBloc(NavigationState("A")),
-      child: AppWithBlocBuilder(),
+      child: AppWithRouter(),
     ),
   );
 }

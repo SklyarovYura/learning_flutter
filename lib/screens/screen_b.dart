@@ -15,7 +15,7 @@ class ScreenB extends StatelessWidget {
         child: ElevatedButton(
           child: Text('go to screen A'),
           onPressed: () {
-            BlocProvider.of<NavigationBloc>(context).add(NavigationEvent("A"));
+            Navigator.of(context).pop();
           },
         ),
       ),

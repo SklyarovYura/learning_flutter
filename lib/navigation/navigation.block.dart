@@ -17,18 +17,4 @@ class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
         break;
     }
   }
-
-  // MyBloc() : super(StateA());
-  //
-  // @override
-  // Stream<MyState> mapEventToState(MyEvent event) async* {
-  //   switch (event) {
-  //     case MyEvent.eventA:
-  //       yield StateA();
-  //       break;
-  //     case MyEvent.eventB:
-  //       yield StateB();
-  //       break;
-  //   }
-  // }
 }
