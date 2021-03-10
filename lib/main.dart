@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learning_flutter/navigation/navigation.block.dart';
-
 import 'app.dart';
+import 'navigation/navigation.state.dart';
 
 void _main() {
   runApp(AppWithBlocBuilder());
 }
 
-
 void main() {
   runApp(
     BlocProvider(
-      create: (context) => NavigationBloc(),
+      create: (context) => NavigationBloc(NavigationState("A")),
       child: AppWithBlocBuilder(),
     ),
   );
