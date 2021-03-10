@@ -1,0 +1,4 @@
+class NavigationState {
+  String screen;
+
+}

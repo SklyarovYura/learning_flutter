@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learning_flutter/navigation/navigation.block.dart';
+
+import 'app.dart';
+
+void _main() {
+  runApp(AppWithBlocBuilder());
+}
+
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    BlocProvider(
+      create: (context) => NavigationBloc(),
+      child: AppWithBlocBuilder(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
