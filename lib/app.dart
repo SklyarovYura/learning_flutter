@@ -1,31 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learning_flutter/navigation/navigation.block.dart';
-import 'package:learning_flutter/screens/screen_a.dart';
-import 'package:learning_flutter/screens/screen_b.dart';
-import 'package:learning_flutter/screens/screen_not_found.dart';
+import 'package:learning_flutter/router.dart';
+import 'main.dart';
 
-import 'navigation/navigation.state.dart';
+class App extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _AppState();
+}
 
-class AppWithBlocBuilder extends StatelessWidget {
+class _AppState extends State<App> {
+  BookRouterDelegate _routerDelegate = BookRouterDelegate();
+  AppRouteInformationParser _routeInformationParser = AppRouteInformationParser();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: BlocBuilder<NavigationBloc, NavigationState>(
-        builder: (_, state) {
-          switch (state.screen) {
-            case 'A':
-              {
-                return ScreenA();
-              }
-            case 'B':
-              {
-                return ScreenB();
-              }
-          }
-          return Screen404();
-        },
-      ),
+    return MaterialApp.router(
+      title: 'Books App',
+      routerDelegate: _routerDelegate,
+      routeInformationParser: _routeInformationParser,
     );
   }
 }
