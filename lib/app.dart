@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learning_flutter/navigation/navigation.block.dart';
+import 'package:learning_flutter/screens/datepicker.dart';
 import 'package:learning_flutter/screens/screen_a.dart';
 import 'package:learning_flutter/screens/screen_b.dart';
 import 'package:learning_flutter/screens/screen_not_found.dart';
@@ -21,6 +22,10 @@ class AppWithBlocBuilder extends StatelessWidget {
             case 'B':
               {
                 return ScreenB();
+              }
+            case "D":
+              {
+                return DatePickerScreen();
               }
           }
           return Screen404();

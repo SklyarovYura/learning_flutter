@@ -15,6 +15,9 @@ class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
       case "B":
         yield NavigationState("B");
         break;
+      case "D":
+        yield NavigationState("D");
+        break;
     }
   }
 
